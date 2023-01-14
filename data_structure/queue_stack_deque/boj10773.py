@@ -1,7 +1,6 @@
 import sys
 
 k = int(input())
-
 stack = []
 
 for _ in range(k):
