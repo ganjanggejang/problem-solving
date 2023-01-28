@@ -1,3 +1,8 @@
+"""
+결정 문제: "상한을 mid로 했을 때 예산 분배가 가능한가?"로 잡아주면 
+결정 문제의 분포는 tttttffffff
+"""
+
 def check(mid):
     cnt = 0
     for x in budget:
