@@ -13,23 +13,23 @@ import sys
 
 
 def check(mid):
-  	cnt = 1  # 첫번째 집에 공유기 설치
-  	i = 0
-  	j = 1
-  	while j < n:
-  		if house[j] - house[i] >= mid:
-  			i = j
-  			cnt += 1
-  
-  		j += 1
-  
-  	return cnt >= c
+	cnt = 1  # 첫번째 집에 공유기 설치
+	i = 0
+	j = 1
+	while j < n:
+		if house[j] - house[i] >= mid:
+			i = j
+			cnt += 1
+
+		j += 1
+
+	return cnt >= c
 
 
 n, c = map(int, input().split())
 house = []
 for _ in range(n):
-  	house.append(int(sys.stdin.readline()))
+	house.append(int(sys.stdin.readline()))
 
 house.sort()
 
@@ -37,8 +37,8 @@ lo = 1
 hi = house[-1] + 1
 
 while lo + 1 < hi:
-  	mid = (lo + hi) // 2
-  	if check(mid): lo = mid
-  	else: hi = mid
+	mid = (lo + hi) // 2
+	if check(mid): lo = mid
+	else: hi = mid
 
 print(lo)
